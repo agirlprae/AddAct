@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Platform, ActionSheetController } from 'ionic-angular';
 
 /*
   Generated class for the Detail page.
@@ -11,12 +12,36 @@ import { NavController } from 'ionic-angular';
   selector: 'page-detail',
   templateUrl: 'detail.html'
 })
+
 export class DetailPage {
+  constructor(
+    public platform: Platform,
+    public actionsheetCtrl: ActionSheetController
+  ) { }
 
-  constructor(public navCtrl: NavController) {}
-
-  ionViewDidLoad() {
-    console.log('Hello DetailPage Page');
+  openMenu() {
+    let actionSheet = this.actionsheetCtrl.create({
+      title: 'Select',
+      cssClass: 'page-detail',
+      buttons: [
+        {
+          text: 'Save',
+          role: 'Save',
+          icon: !this.platform.is('ios') ? 'checkmark' : null,
+          handler: () => {
+            console.log('Add clicked');
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel', // will always sort to be on the bottom
+          icon: !this.platform.is('ios') ? 'close' : null,
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
   }
-
 }

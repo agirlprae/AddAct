@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { AlertController } from 'ionic-angular';
 /*
   Generated class for the Jointact page.
 
@@ -13,10 +14,30 @@ import { NavController } from 'ionic-angular';
 })
 export class JointactPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public alertCtrl: AlertController) { }
 
-  ionViewDidLoad() {
-    console.log('Hello JointactPage Page');
+  doPrompt() {
+    let prompt = this.alertCtrl.create({
+      title: 'Added!',
+      message: "If you want to add participants click Add. ",
+
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Add',
+          handler: data => {
+            console.log('Add clicked');
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
 }
+
