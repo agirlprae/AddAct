@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Platform, ActionSheetController, AlertController } from 'ionic-angular';
 
 /*
-  Generated class for the Edit page.
+  Generated class for the Detail page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
@@ -11,12 +12,46 @@ import { NavController } from 'ionic-angular';
   selector: 'page-edit',
   templateUrl: 'edit.html'
 })
+
 export class EditPage {
+  constructor(
+    public platform: Platform,
+    public actionsheetCtrl: ActionSheetController,
+    public alertCtrl: AlertController
+  ) { }
 
-  constructor(public navCtrl: NavController) {}
+  openMenu() {
+    let actionSheet = this.actionsheetCtrl.create({
+      title: 'Select',
+      cssClass: 'page-edit',
+      buttons: [
+        {
+          text: 'Paticipants',
+          role: 'Save',
+          icon: !this.platform.is('ios') ? 'contacts' : null,
+          handler: () => {
+            console.log('Contacts clicked');
+          }
+        },
+      ]
+    });
+    actionSheet.present();
+  }
 
-  ionViewDidLoad() {
-    console.log('Hello EditPage Page');
+  doPrompt() {
+    let prompt = this.alertCtrl.create({
+      title: 'Updated!',
+
+      buttons: [
+        {
+          text: 'Okay',
+          handler: data => {
+            console.log('Okay clicked');
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
 }

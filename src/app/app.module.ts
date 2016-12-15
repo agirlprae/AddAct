@@ -1,17 +1,22 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+
 import { HomePage } from '../pages/home/home';
+import { DetailPage } from '../pages/detail/detail';
 import { JointactPage } from '../pages/jointact/jointact';
+import { EditPage } from '../pages/edit/edit';
 import { ListPage } from '../pages/list/list';
 import { PaticipantsPage } from '../pages/paticipants/paticipants';
-
+>>>>>>> 29f1bfcf00b1ad02bbbde834650d9e2a71e296ae
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    DetailPage,
     JointactPage,
+    EditPage,
     ListPage,
     PaticipantsPage
   ],
@@ -22,7 +27,9 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
   entryComponents: [
     MyApp,
     HomePage,
+    DetailPage,
     JointactPage,
+    EditPage,
     ListPage,
     PaticipantsPage
 

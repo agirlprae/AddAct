@@ -20,4 +20,34 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding class="page-home">
+  <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="checkmark" (click)="doPrompt()"></ion-icon></button>
+    
+  </ion-fab>
+
+  <div class="font"><h1>Activity Name</h1></div><br>
+  <ion-list>
+
+  <ion-item>
+    <ion-label>Title :</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Describe :</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Date :</ion-label>
+    <ion-input type="date"></ion-input>
+  </ion-item>  
+
+</ion-list>
+
+
+<button ion-button block color="dark" (click)="openMenu()">Participants</button>
+
+
+</ion-content>
