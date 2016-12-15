@@ -20,4 +20,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+
+
+
+
+<ion-content>
+<ion-list>
+
+  <ion-item>
+    <ion-label>Father's Day</ion-label>
+    <ion-checkbox [(ngModel)]="father"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Newyear'day</ion-label>
+    <ion-checkbox [(ngModel)]="newyear"></ion-checkbox>
+  </ion-item>
+
+    <ion-item>
+    <ion-label>Loykatong's Day</ion-label>
+    <ion-checkbox [(ngModel)]="loykatong"></ion-checkbox>
+  </ion-item>
+
+</ion-list>
+<button ion-button block color="dark" (click)="openMenu()">Select</button>
+</ion-content>
+

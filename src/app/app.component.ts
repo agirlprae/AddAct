@@ -4,13 +4,15 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
 import { JointactPage } from '../pages/jointact/jointact';
+import { ListPage } from '../pages/list/list';
+import { PaticipantsPage  } from '../pages/paticipants/paticipants';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = JointactPage;
+  rootPage = PaticipantsPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
