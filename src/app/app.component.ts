@@ -14,7 +14,7 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = EditPage;
+  rootPage = HomePage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Platform, ActionSheetController } from 'ionic-angular';
+import { Platform, ActionSheetController, NavController } from 'ionic-angular';
 
+import { DetailPage } from '../detail/detail';
+import { EditPage } from '../edit/edit';
+
+import { ListPage } from '../list/list';
 /*
   Generated class for the Home page.
 
@@ -17,8 +20,14 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 export class HomePage {
   constructor(
     public platform: Platform,
-    public actionsheetCtrl: ActionSheetController
+    public actionsheetCtrl: ActionSheetController,
+    public navCtrl: NavController
   ) { }
+
+
+  list(){
+      this.navCtrl.push(ListPage);
+  }
 
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
@@ -30,7 +39,7 @@ export class HomePage {
           role: 'Add',
           icon: !this.platform.is('ios') ? 'add' : null,
           handler: () => {
-            console.log('Add clicked');
+            this.navCtrl.push(DetailPage);
           }
         },
       
@@ -38,7 +47,7 @@ export class HomePage {
           text: 'Edit Activities',
           icon: !this.platform.is('ios') ? 'hammer' : null,
           handler: () => {
-            console.log('Edit clicked');
+            this.navCtrl.push(EditPage);
           }
         },
         {

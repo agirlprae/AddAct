@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { AlertController } from 'ionic-angular';
+
+import { HomePage } from '../home/home';
+import { ListPage } from '../list/list';
 /*
   Generated class for the Jointact page.
 
@@ -14,7 +17,18 @@ import { AlertController } from 'ionic-angular';
 })
 export class JointactPage {
 
-  constructor(public alertCtrl: AlertController) { }
+  constructor(
+    public alertCtrl: AlertController,
+    public navCtrl: NavController
+   ) { }
+
+  home(){
+      this.navCtrl.push(HomePage);
+  }
+
+  list(){
+      this.navCtrl.push(ListPage);
+  }
 
   doPrompt() {
     let prompt = this.alertCtrl.create({

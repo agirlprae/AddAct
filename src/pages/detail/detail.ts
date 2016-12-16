@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 
+import { HomePage } from '../home/home';
+import { ListPage } from '../list/list';
 /*
   Generated class for the Detail page.
 
@@ -16,8 +18,17 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 export class DetailPage {
   constructor(
     public platform: Platform,
-    public actionsheetCtrl: ActionSheetController
+    public actionsheetCtrl: ActionSheetController,
+    public navCtrl: NavController
   ) { }
+
+  home(){
+      this.navCtrl.push(HomePage);
+  }
+
+  list(){
+      this.navCtrl.push(ListPage);
+  }
 
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({

@@ -7,13 +7,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons start>
-      <button ion-button icon-only color="royal">
+      <button ion-button icon-only color="royal" (click)="home()">
         <ion-icon name="home"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Edit</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal">
+      <button ion-button icon-only color="royal" (click)="list()">
         <ion-icon name="list"></ion-icon>
       </button>
     </ion-buttons>
@@ -22,7 +22,7 @@
 
 <ion-content padding class="page-home">
   <ion-fab top right edge>
-    <button ion-fab mini><ion-icon name="checkmark" (click)="doPrompt()"></ion-icon></button>
+    <button ion-fab mini (click)="doPrompt()"><ion-icon name="checkmark"></ion-icon></button>
     
   </ion-fab>
 
@@ -47,7 +47,7 @@
 </ion-list>
 
 
-<button ion-button block color="dark" (click)="openMenu()">Participants</button>
 
+<button ion-button (click)="PtcpPage()" block color="dark">Participants</button>
 
 </ion-content>

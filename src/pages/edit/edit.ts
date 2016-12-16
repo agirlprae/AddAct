@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Platform, ActionSheetController, AlertController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
+
+import { HomePage } from '../home/home';
+import { ListPage } from '../list/list';
+import { PaticipantsPage } from '../paticipants/paticipants';
 
 /*
   Generated class for the Detail page.
@@ -15,27 +18,20 @@ import { Platform, ActionSheetController, AlertController } from 'ionic-angular'
 
 export class EditPage {
   constructor(
-    public platform: Platform,
-    public actionsheetCtrl: ActionSheetController,
+    public navCtrl: NavController,
     public alertCtrl: AlertController
-  ) { }
+  ) {}
 
-  openMenu() {
-    let actionSheet = this.actionsheetCtrl.create({
-      title: 'Select',
-      cssClass: 'page-edit',
-      buttons: [
-        {
-          text: 'Paticipants',
-          role: 'Save',
-          icon: !this.platform.is('ios') ? 'contacts' : null,
-          handler: () => {
-            console.log('Contacts clicked');
-          }
-        },
-      ]
-    });
-    actionSheet.present();
+  home(){
+      this.navCtrl.push(HomePage);
+  }
+
+  list(){
+      this.navCtrl.push(ListPage);
+  }
+
+  PtcpPage(){
+    this.navCtrl.push(PaticipantsPage);
   }
 
   doPrompt() {
