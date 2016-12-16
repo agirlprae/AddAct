@@ -8,6 +8,7 @@ import { JointactPage } from '../pages/jointact/jointact';
 import { EditPage } from '../pages/edit/edit';
 import { ListPage } from '../pages/list/list';
 import { PaticipantsPage } from '../pages/paticipants/paticipants';
+>>>>>>> 29f1bfcf00b1ad02bbbde834650d9e2a71e296ae
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
     EditPage,
     ListPage,
     PaticipantsPage
+
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

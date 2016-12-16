@@ -14,7 +14,13 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage = HomePage;
+=======
+
+  rootPage = PaticipantsPage;
+
+>>>>>>> f11e58c81d8b3e92d4a3780864c3b1fd7581d99d
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

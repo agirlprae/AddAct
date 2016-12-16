@@ -6,6 +6,10 @@ import { HomePage } from '../home/home';
 import { ListPage } from '../list/list';
 /*
   Generated class for the Home page.
+<<<<<<< HEAD
+=======
+
+>>>>>>> f11e58c81d8b3e92d4a3780864c3b1fd7581d99d
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
@@ -13,7 +17,6 @@ import { ListPage } from '../list/list';
   selector: 'page-paticipants',
   templateUrl: 'paticipants.html'
 })
-
 
 export class PaticipantsPage {
   constructor(
