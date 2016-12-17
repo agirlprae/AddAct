@@ -15,7 +15,7 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
 })
 export class MyApp {
 
-  rootPage = DetailPage;
+  rootPage = EditPage;
 
 
   constructor(platform: Platform) {
