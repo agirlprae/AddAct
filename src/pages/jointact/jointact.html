@@ -8,19 +8,27 @@
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button icon-only color="royal" (click)="home()">
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>JoinAct</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" (click)="list()">
-        <ion-icon name="list"></ion-icon>
+       <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding class="getting-started">
+      <img src="img/join.png">
+      
+  <div class="card">
+    <div class="item item-divider center-text">
+        <br><h3>Join Activity</h3>
+    </div>
+  </div>
+
   <ion-item>
     <ion-label>Enter ID number</ion-label>
     <ion-input type="number" value=""></ion-input>

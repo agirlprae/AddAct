@@ -5,6 +5,7 @@ import { DetailPage } from '../detail/detail';
 import { EditPage } from '../edit/edit';
 
 import { ListPage } from '../list/list';
+
 /*
   Generated class for the Home page.
 
@@ -47,7 +48,7 @@ export class HomePage {
           text: 'Edit Activities',
           icon: !this.platform.is('ios') ? 'hammer' : null,
           handler: () => {
-            this.navCtrl.push(EditPage);
+            this.navCtrl.push(ListPage);
           }
         },
         {

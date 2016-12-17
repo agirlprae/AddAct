@@ -16,6 +16,7 @@ import { ListPage } from '../list/list';
 @Component({
   selector: 'page-paticipants',
   templateUrl: 'paticipants.html'
+  
 })
 
 export class PaticipantsPage {

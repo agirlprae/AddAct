@@ -9,6 +9,7 @@ import { EditPage } from '../pages/edit/edit';
 import { ListPage } from '../pages/list/list';
 import { PaticipantsPage } from '../pages/paticipants/paticipants';
 
+
 @NgModule({
   declarations: [
     MyApp,
