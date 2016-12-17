@@ -1,37 +1,64 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Platform, ActionSheetController } from 'ionic-angular';
-import { DetailPage } from '../detail/detail';
-import { EditPage } from '../edit/edit';
-
-
+import { ModalController, NavController,Platform, ActionSheetController } from 'ionic-angular';
+import { AddPage } from '../add/add'
+import { ItemPage } from '../item/item'
 import { HomePage } from '../home/home';
+import { EditPage } from '../edit/edit';
 /*
-  Generated class for the Home page.
-<<<<<<< HEAD
-=======
+  Generated class for the Home2 page.
 
->>>>>>> f11e58c81d8b3e92d4a3780864c3b1fd7581d99d
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html'
+  selector: 'page-home2',
+  templateUrl: 'home2.html',
+
 })
 
-export class ListPage {
+
+export class Home2Page {
+ 
+  public items = [];
+ 
   constructor(
-    public platform: Platform,
+  	public navCtrl: NavController, 
+  	public modalCtrl: ModalController,
+  	public platform: Platform,
     public actionsheetCtrl: ActionSheetController,
-    public navCtrl: NavController
-  ) { }
+  	) {  }
+ 
+  ionViewDidLoad(){}
 
   home(){
       this.navCtrl.push(HomePage);
   }
+ 
+  addItem(){
+ 
+    let addModal = this.modalCtrl.create(AddPage);
+    // call back when modal dismissed
+    addModal.onDidDismiss((item) => {
+      if(item){
+        this.saveItem(item);
+      }
+    });
+    addModal.present();
+    
+  }
+ 
+  // viewItem(item){
+  // 	this.navCtrl.push(ItemPage, {
+  //   item: item
+  // });
+  // }
 
-  openMenu() {
+  saveItem(item){
+    this.items.push(item);
+  }
+
+
+  selectItem(item) {
     let actionSheet = this.actionsheetCtrl.create({
       title: 'Select',
       cssClass: 'page-list',
@@ -41,7 +68,6 @@ export class ListPage {
           role: 'Edit',
           icon: !this.platform.is('ios') ? 'hammer' : null,
           handler: () => {
-            console.log('Edit clicked');
             this.navCtrl.push(EditPage);
           }
         },
@@ -51,7 +77,8 @@ export class ListPage {
           role: 'Delete',
           icon: !this.platform.is('ios') ? 'trash' : null,
           handler: () => {
-            console.log('Delete clicked');
+            if(this.items == item)
+        		this.items.splice(item,1);
           }
         },
 
@@ -76,4 +103,5 @@ export class ListPage {
     });
     actionSheet.present();
   }
+ 
 }

@@ -7,29 +7,38 @@
 
 
 <ion-header>
+
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button icon-only color="royal">
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Home</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" (click)="list()">
-        <ion-icon name="list"></ion-icon>
+   
+       <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon> 
       </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content padding class="page-home">
+<ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
 
-  <ion-card>
-    <img src="img/phrabhida.png"/>
-    <div class="card-title">AddAct App</div>
-    <div class="card-subtitle">AddAct is an application for check all number of students <br>in each attendace activities.<br></div>
-  </ion-card>
-  <button ion-button block color="dark" (click)="openMenu()">Activity</button>
+	<div class="font"><h1>AddAct</h1></div><br>
+	<ion-card>
+		<ion-card-content>
+	    	AddAct is an application for check all number of students in each attendace activities.
+	    </ion-card-content>
+	</ion-card>
+
+	<button ion-button block color="dark" (click)="openMenu()">Activity</button>
 </ion-content>
 
 

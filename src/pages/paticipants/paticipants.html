@@ -7,13 +7,13 @@
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button icon-only color="royal" (click)="home()">
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Participants</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" (click)="list()">
-        <ion-icon name="list"></ion-icon>
+       <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -26,9 +26,8 @@
 
 <ion-card>
   <ion-card-header>
-    Header
+    ID Student
   </ion-card-header>
-
 <br>5610110635
 <br>5610100635
 <br>5610110635
@@ -47,7 +46,7 @@
 <br>5610100635
 </ion-card>
 
-<button ion-button block color="dark" (click)="openMenu()">okay</button>
+<button ion-button block color="dark" (click)="openMenu()">SELECT</button>
 
 
 </ion-content>
