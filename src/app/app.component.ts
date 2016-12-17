@@ -16,7 +16,7 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
 export class MyApp {
 
 
-  rootPage = ListPage;
+  rootPage = PaticipantsPage;
 
 
   // make UsersPage the root (or first) page
