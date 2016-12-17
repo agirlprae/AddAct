@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Todos
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items" >
+    	<button ion-button color="dark" clear block (click)="selectItem()">{{item.title}}</button>
+  	</ion-item>
+  </ion-list>
+
+</ion-content>
+
+<!-- <button-sliding-left danger (click)="removeItem(item)"><ion-icon name="trash"></ion-icon> Delete</button> -->
+
