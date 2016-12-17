@@ -1,23 +1,30 @@
-.page-home {
 
-  .font {
-  	position: relative;
-    text-align: center;
-    font-size: 2.0em;
-    font-weight: bold;
-    color: #000;
+//.page-home{
+
+  .card-background-page {
+
+      ion-card {
+      position: relative;
+      text-align: center;
     }
 
-  .ion-md-add {
-	  color: #757575;
-	}
+    .card-title {
+      position: absolute;
+      top: 45%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
 
-  .ion-md-hammer {
-	  color: #757575;
-	}
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 68%;
+      width: 100%;
+      color: #fff;
+    }
 
-  .ion-md-close {
-	  color: #757575;
-	}
+  }
 
-}
+//}
