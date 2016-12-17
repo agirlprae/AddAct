@@ -7,13 +7,13 @@
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button icon-only color="royal" (click)="home()">
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>List</ion-title>
+    <ion-title>ActivityList</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" >
-        <ion-icon name="list"></ion-icon>
+        <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -24,24 +24,28 @@
 
 
 <ion-content>
-<ion-list>
+
+<ion-list radio-group>
+  <ion-list-header>
+    Activity
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Loykatong's Day</ion-label>
+    <ion-radio checked="true" value="loykatong"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Newyear's Day</ion-label>
+    <ion-radio value="newyear"></ion-radio>
+  </ion-item>
 
   <ion-item>
     <ion-label>Father's Day</ion-label>
-    <ion-checkbox [(ngModel)]="father"></ion-checkbox>
+    <ion-radio value="father" ></ion-radio>
   </ion-item>
-
-  <ion-item>
-    <ion-label>Newyear'day</ion-label>
-    <ion-checkbox [(ngModel)]="newyear"></ion-checkbox>
-  </ion-item>
-
-    <ion-item>
-    <ion-label>Loykatong's Day</ion-label>
-    <ion-checkbox [(ngModel)]="loykatong"></ion-checkbox>
-  </ion-item>
-
 </ion-list>
+
 <button ion-button block color="dark" (click)="openMenu()">Select</button>
 
 </ion-content>

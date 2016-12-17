@@ -7,22 +7,29 @@
 
 
 <ion-header>
+
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button icon-only color="royal">
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Home</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" (click)="list()">
-        <ion-icon name="list"></ion-icon>
+       <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon> 
       </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding class="page-home">
+<ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+
 	<div class="font"><h1>AddAct</h1></div><br>
 	<ion-card>
 		<ion-card-content>

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
+import { DetailPage } from '../detail/detail';
+import { EditPage } from '../edit/edit';
+
 
 import { HomePage } from '../home/home';
 /*
@@ -39,6 +42,7 @@ export class ListPage {
           icon: !this.platform.is('ios') ? 'hammer' : null,
           handler: () => {
             console.log('Edit clicked');
+            this.navCtrl.push(EditPage);
           }
         },
       
