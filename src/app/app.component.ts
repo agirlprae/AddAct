@@ -14,6 +14,7 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
  @ViewChild(Nav) nav: Nav;
 
   // make UsersPage the root (or first) page
@@ -22,6 +23,7 @@ export class MyApp {
 
   constructor(public platform: Platform,  public menu: MenuController) {
     this.initializeApp();
+
 
     // set our app's pages
     this.pages = [
