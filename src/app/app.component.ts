@@ -16,11 +16,11 @@ import { PaticipantsPage } from '../pages/paticipants/paticipants';
 export class MyApp {
 
 
-  rootPage = EditPage;
+  rootPage = ListPage;
 
 
   // make UsersPage the root (or first) page
-  rootPage: any = HomePage;
+  //rootPage: any = HomePage;
   pages: Array<{title: string, component: any}>;
 
 
@@ -48,7 +48,7 @@ export class MyApp {
     // close the menu when clicking a link from the menu
     //this.menu.close();
     // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+    //this.nav.setRoot(page.component);
     this.menu.close();
   }
 }
